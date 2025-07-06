@@ -1,0 +1,8 @@
+services:
+  latex:
+    volumes:
+      - ../:/project:cached
+    build:
+      context: ../
+      dockerfile: .devcontainer/dockerfile
+    command: [ "sh", "-c", "sleep infinity" ]

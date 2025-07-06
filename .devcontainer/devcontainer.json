@@ -1,0 +1,39 @@
+{
+  "name": "latex",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "latex",
+  "workspaceFolder": "/project/src",
+  "overrideCommand": false,
+
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "james-yu.latex-workshop"
+      ],
+      "settings": {
+        "latex-workshop.latex.outDir": "./out",
+        "latex-workshop.view.pdf.viewer": "tab",
+        "latex-workshop.latex.autoBuild.run": "onSave",
+        "latex-workshop.latex.recipes": [
+          {
+            "name": "latexmk (out dir)",
+            "tools": ["latexmk"]
+          }
+        ],
+        "latex-workshop.latex.tools": [
+          {
+            "name": "latexmk",
+            "command": "latexmk",
+            "args": [
+              "-pdf",
+              "-interaction=nonstopmode",
+              "-synctex=1",
+              "-outdir=out",
+              "%DOC%"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

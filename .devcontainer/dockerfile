@@ -1,0 +1,10 @@
+FROM ubuntu:24.04
+
+ENV DEBIAN_FRONTEND=noninteractive
+
+# install linux packages
+# 
+RUN apt-get update -y && apt-get upgrade -y && \
+    apt install texlive-latex-extra texlive-extra-utils latexmk perl -y && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/*

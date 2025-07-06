@@ -1,3 +1,5 @@
+// main configuration is done in docker-compose and dockerfile
+// here are only the definitions relevant for VS Code
 {
   "name": "latex",
   "dockerComposeFile": "docker-compose.yml",

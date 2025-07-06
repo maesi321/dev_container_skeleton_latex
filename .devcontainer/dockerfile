@@ -2,8 +2,7 @@ FROM ubuntu:24.04
 
 ENV DEBIAN_FRONTEND=noninteractive
 
-# install linux packages
-# 
+# install linux packages and cleanup
 RUN apt-get update -y && apt-get upgrade -y && \
     apt install texlive-latex-extra texlive-extra-utils latexmk perl -y && \
     apt-get clean && \
